@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-brand">
-                <h1>🛍️ VêteMod</h1>
-            </div>
+            <div class="navbar-brand"><h1>🛍️ VêteMod</h1></div>
             <div class="navbar-menu">
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
@@ -22,24 +19,22 @@
                 </ul>
             </div>
             <div class="navbar-cart">
-                <button id="cart-btn" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count" class="cart-count">0</span>
+                <button id="cart-btn" class="cart-icon" aria-label="Ouvrir le panier">
+                    <i class="fas fa-shopping-cart"></i><span id="cart-count" class="cart-count">0</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <h2>Découvrez Notre Collection</h2>
-            <p>Vêtements modernes et tendance pour tous les styles</p>
+            <p class="eyebrow">NOUVELLE COLLECTION 2026</p>
+            <h2>Le style qui vous ressemble</h2>
+            <p>Découvrez des pièces modernes, sélectionnées pour votre quotidien.</p>
             <button id="shop-btn" class="btn btn-primary">Voir les produits</button>
         </div>
     </section>
 
-    <!-- Filtres -->
     <section class="filters-section">
         <div class="container">
             <h3>Filtrer par catégorie</h3>
@@ -53,60 +48,48 @@
         </div>
     </section>
 
-    <!-- Produits -->
     <section id="produits" class="products-section">
         <div class="container">
-            <h2>Nos Produits</h2>
-            <div class="products-grid" id="products-grid">
-                <!-- Les produits seront insérés ici par JavaScript -->
+            <div class="section-heading">
+                <div><p class="eyebrow">SÉLECTION VÊTEMOD</p><h2>Nos produits</h2></div>
+                <p class="gallery-hint"><i class="fas fa-camera"></i> Cliquez sur une image pour l'agrandir</p>
             </div>
+            <div class="products-grid" id="products-grid"></div>
         </div>
     </section>
 
-    <!-- Panier Modal -->
+    <div id="gallery-modal" class="gallery-modal" role="dialog" aria-modal="true" aria-label="Galerie produit">
+        <button id="gallery-close" class="gallery-close" aria-label="Fermer">&times;</button>
+        <button id="gallery-prev" class="gallery-arrow gallery-prev" aria-label="Image précédente"><i class="fas fa-chevron-left"></i></button>
+        <div class="gallery-viewer">
+            <img id="gallery-image" src="" alt="">
+            <div id="gallery-caption" class="gallery-caption"></div>
+            <div id="gallery-thumbnails" class="gallery-thumbnails"></div>
+        </div>
+        <button id="gallery-next" class="gallery-arrow gallery-next" aria-label="Image suivante"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2>Mon Panier</h2>
-            <div id="cart-items" class="cart-items">
-                <!-- Items du panier -->
-            </div>
-            <div class="cart-summary">
-                <h3>Total: <span id="cart-total">0.00</span> €</h3>
-            </div>
+            <h2>Mon panier</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary"><h3>Total : <span id="cart-total">0.00</span> €</h3></div>
             <button class="btn btn-primary" id="checkout-btn">Procéder au paiement</button>
             <button class="btn btn-secondary" id="continue-shopping-btn">Continuer le shopping</button>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>À propos</h4>
-                    <p>VêteMod est votre destination pour les vêtements modernes et tendance.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: info@vetemod.com</p>
-                    <p>Téléphone: +33 1 23 45 67 89</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Suivez-nous</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+                <div class="footer-section"><h4>À propos</h4><p>VêteMod est votre destination pour les vêtements modernes et tendance.</p></div>
+                <div class="footer-section"><h4>Contact</h4><p>Email : info@vetemod.com</p><p>Téléphone : +33 1 23 45 67 89</p></div>
+                <div class="footer-section"><h4>Suivez-nous</h4><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 VêteMod. Tous droits réservés.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 VêteMod. Tous droits réservés.</p></div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

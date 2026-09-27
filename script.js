@@ -1,331 +1,55 @@
-// Données des produits
 const products = [
-    {
-        id: 1,
-        name: "T-shirt Classique",
-        category: "homme",
-        price: 29.99,
-        description: "Confortable et élégant",
-        emoji: "👕"
-    },
-    {
-        id: 2,
-        name: "Jeans Slim Fit",
-        category: "homme",
-        price: 59.99,
-        description: "Coupe moderne et ajustée",
-        emoji: "👖"
-    },
-    {
-        id: 3,
-        name: "Robe Midi",
-        category: "femme",
-        price: 79.99,
-        description: "Élégante et intemporelle",
-        emoji: "👗"
-    },
-    {
-        id: 4,
-        name: "Chemise Formelle",
-        category: "femme",
-        price: 69.99,
-        description: "Parfaite pour les occasions",
-        emoji: "👔"
-    },
-    {
-        id: 5,
-        name: "Sweat à Capuche",
-        category: "enfant",
-        price: 39.99,
-        description: "Chaud et confortable",
-        emoji: "🧥"
-    },
-    {
-        id: 6,
-        name: "Pantalon Enfant",
-        category: "enfant",
-        price: 34.99,
-        description: "Robuste et pratique",
-        emoji: "👖"
-    },
-    {
-        id: 7,
-        name: "Casquette Baseball",
-        category: "accessoires",
-        price: 24.99,
-        description: "Casual et tendance",
-        emoji: "🧢"
-    },
-    {
-        id: 8,
-        name: "Écharpe Laine",
-        category: "accessoires",
-        price: 44.99,
-        description: "Chaude et douce",
-        emoji: "🧣"
-    },
-    {
-        id: 9,
-        name: "Blouson Cuir",
-        category: "homme",
-        price: 149.99,
-        description: "Look rock et stylé",
-        emoji: "🧥"
-    },
-    {
-        id: 10,
-        name: "Leggings Sport",
-        category: "femme",
-        price: 44.99,
-        description: "Parfait pour le sport",
-        emoji: "🩳"
-    },
-    {
-        id: 11,
-        name: "Chaussures Baskets",
-        category: "accessoires",
-        price: 89.99,
-        description: "Confortables et stylées",
-        emoji: "👟"
-    },
-    {
-        id: 12,
-        name: "Sac à Main",
-        category: "accessoires",
-        price: 99.99,
-        description: "Pratique et élégant",
-        emoji: "👜"
-    }
+    { id: 1, name: "T-shirt Classique", category: "homme", price: 29.99, description: "Confortable et élégant", images: ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=900&q=85"] },
+    { id: 2, name: "Jeans Slim Fit", category: "homme", price: 59.99, description: "Coupe moderne et ajustée", images: ["https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1475178626620-a4d074967452?auto=format&fit=crop&w=900&q=85"] },
+    { id: 3, name: "Robe Midi", category: "femme", price: 79.99, description: "Élégante et intemporelle", images: ["https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1585488433561-9a2e8b8e5b1f?auto=format&fit=crop&w=900&q=85"] },
+    { id: 4, name: "Chemise Formelle", category: "femme", price: 69.99, description: "Parfaite pour les occasions", images: ["https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1608234807905-4466023792f5?auto=format&fit=crop&w=900&q=85"] },
+    { id: 5, name: "Sweat à Capuche", category: "enfant", price: 39.99, description: "Chaud et confortable", images: ["https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=900&q=85"] },
+    { id: 6, name: "Pantalon Enfant", category: "enfant", price: 34.99, description: "Robuste et pratique", images: ["https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=900&q=85"] },
+    { id: 7, name: "Casquette Baseball", category: "accessoires", price: 24.99, description: "Casual et tendance", images: ["https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=900&q=85"] },
+    { id: 8, name: "Écharpe Laine", category: "accessoires", price: 44.99, description: "Chaude et douce", images: ["https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1609803384069-19f3c8f3c8d1?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=85"] },
+    { id: 9, name: "Blouson Cuir", category: "homme", price: 149.99, description: "Look rock et stylé", images: ["https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1520975958225-5e5b7f7f0a56?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=900&q=85"] },
+    { id: 10, name: "Leggings Sport", category: "femme", price: 44.99, description: "Parfait pour le sport", images: ["https://images.unsplash.com/photo-1506629905607-d9c297d1d9f0?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85"] },
+    { id: 11, name: "Chaussures Baskets", category: "accessoires", price: 89.99, description: "Confortables et stylées", images: ["https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=85"] },
+    { id: 12, name: "Sac à Main", category: "accessoires", price: 99.99, description: "Pratique et élégant", images: ["https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85", "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=900&q=85"] }
 ];
+let cart = [], currentFilter = 'all', galleryProduct = null, galleryIndex = 0;
+const $ = (id) => document.getElementById(id);
+const productsGrid = $('products-grid'), cartModal = $('cart-modal'), cartItemsContainer = $('cart-items');
 
-// Panier
-let cart = [];
-
-// Éléments du DOM
-const productsGrid = document.getElementById('products-grid');
-const cartBtn = document.getElementById('cart-btn');
-const cartModal = document.getElementById('cart-modal');
-const closeBtn = document.querySelector('.close-btn');
-const cartItemsContainer = document.getElementById('cart-items');
-const cartTotalElement = document.getElementById('cart-total');
-const cartCountElement = document.getElementById('cart-count');
-const filterBtns = document.querySelectorAll('.filter-btn');
-const checkoutBtn = document.getElementById('checkout-btn');
-const continueShoppingBtn = document.getElementById('continue-shopping-btn');
-const shopBtn = document.getElementById('shop-btn');
-
-let currentFilter = 'all';
-
-// Afficher les produits
-function displayProducts(productsToShow = products) {
-    productsGrid.innerHTML = '';
-
-    productsToShow.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-        productCard.innerHTML = `
-            <div class="product-image">${product.emoji}</div>
+function displayProducts(list = products) {
+    productsGrid.innerHTML = list.map(product => `
+        <article class="product-card">
+            <div class="product-image-wrap" onclick="openGallery(${product.id})" role="button" tabindex="0" aria-label="Voir les images de ${product.name}">
+                <img class="product-image" src="${product.images[0]}" alt="${product.name}" loading="lazy">
+                <span class="image-zoom"><i class="fas fa-expand"></i></span>
+            </div>
             <div class="product-info">
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-category">${product.category}</p>
-                <p class="product-description">${product.description}</p>
-                <p class="product-price">${product.price.toFixed(2)} €</p>
-                <div class="product-actions">
-                    <button class="btn btn-primary" onclick="addToCart(${product.id})">Ajouter</button>
-                    <button class="btn btn-secondary" onclick="addToWishlist(${product.id})">❤️</button>
-                </div>
+                <h3 class="product-name">${product.name}</h3><p class="product-category">${product.category}</p>
+                <p class="product-description">${product.description}</p><p class="product-price">${product.price.toFixed(2)} €</p>
+                <div class="product-actions"><button class="btn btn-primary" onclick="addToCart(${product.id})">Ajouter</button><button class="btn btn-secondary" onclick="addToWishlist(${product.id})">♡</button></div>
             </div>
-        `;
-        productsGrid.appendChild(productCard);
-    });
+        </article>`).join('');
 }
+function filterProducts(category) { currentFilter = category; displayProducts(category === 'all' ? products : products.filter(p => p.category === category)); }
+function openGallery(productId, index = 0) { galleryProduct = products.find(p => p.id === productId); galleryIndex = index; $('gallery-modal').classList.add('open'); document.body.style.overflow = 'hidden'; renderGallery(); }
+function renderGallery() { const image = galleryProduct.images[galleryIndex]; $('gallery-image').src = image; $('gallery-image').alt = `${galleryProduct.name} - image ${galleryIndex + 1}`; $('gallery-caption').textContent = `${galleryProduct.name} · ${galleryIndex + 1}/${galleryProduct.images.length}`; $('gallery-thumbnails').innerHTML = galleryProduct.images.map((src, i) => `<img src="${src}" class="${i === galleryIndex ? 'active' : ''}" alt="Miniature ${i + 1}" onclick="setGalleryImage(${i})">`).join(''); }
+function setGalleryImage(index) { galleryIndex = index; renderGallery(); }
+function closeGallery() { $('gallery-modal').classList.remove('open'); document.body.style.overflow = ''; }
+function nextImage(step) { galleryIndex = (galleryIndex + step + galleryProduct.images.length) % galleryProduct.images.length; renderGallery(); }
+function addToCart(id) { const product = products.find(p => p.id === id), item = cart.find(p => p.id === id); item ? item.quantity++ : cart.push({ ...product, quantity: 1 }); updateCartUI(); showNotification(`${product.name} ajouté au panier !`); }
+function addToWishlist(id) { showNotification(`${products.find(p => p.id === id).name} ajouté à vos favoris !`); }
+function updateCartUI() { $('cart-count').textContent = cart.reduce((sum, item) => sum + item.quantity, 0); if (!cart.length) { cartItemsContainer.innerHTML = '<p style="text-align:center;color:#999;padding:2rem">Votre panier est vide</p>'; $('cart-total').textContent = '0.00'; return; } cartItemsContainer.innerHTML = cart.map(item => `<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name"><img src="${item.images[0]}" width="42" height="42" style="object-fit:cover;border-radius:4px;vertical-align:middle;margin-right:8px">${item.name}</div><div class="cart-item-price">${item.price.toFixed(2)} € x ${item.quantity}</div></div><div class="cart-item-qty"><button onclick="updateQuantity(${item.id},-1)" class="btn btn-secondary">−</button><input value="${item.quantity}" class="qty-input" readonly><button onclick="updateQuantity(${item.id},1)" class="btn btn-secondary">+</button></div><button onclick="removeFromCart(${item.id})" class="btn btn-danger">✕</button></div>`).join(''); $('cart-total').textContent = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2); }
+function updateQuantity(id, change) { const item = cart.find(p => p.id === id); if (item) { item.quantity += change; if (item.quantity <= 0) removeFromCart(id); else updateCartUI(); } }
+function removeFromCart(id) { cart = cart.filter(item => item.id !== id); updateCartUI(); }
+function showNotification(message) { const notification = document.createElement('div'); notification.textContent = message; notification.style.cssText = 'position:fixed;top:80px;right:20px;background:#6657d9;color:white;padding:1rem 1.5rem;border-radius:7px;z-index:500;box-shadow:0 5px 20px #0003'; document.body.appendChild(notification); setTimeout(() => notification.remove(), 2500); }
 
-// Filtrer les produits
-function filterProducts(category) {
-    currentFilter = category;
-    const filtered = category === 'all' 
-        ? products 
-        : products.filter(p => p.category === category);
-    displayProducts(filtered);
-}
-
-// Ajouter au panier
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    const existingItem = cart.find(item => item.id === productId);
-
-    if (existingItem) {
-        existingItem.quantity++;
-    } else {
-        cart.push({
-            ...product,
-            quantity: 1
-        });
-    }
-
-    updateCartUI();
-    showNotification(`${product.name} ajouté au panier!`);
-}
-
-// Ajouter à la liste de souhaits (simple notification)
-function addToWishlist(productId) {
-    const product = products.find(p => p.id === productId);
-    showNotification(`${product.name} ajouté à votre liste de souhaits!`);
-}
-
-// Mettre à jour l'interface du panier
-function updateCartUI() {
-    // Mettre à jour le nombre d'articles
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCountElement.textContent = totalItems;
-
-    // Mettre à jour le contenu du panier
-    cartItemsContainer.innerHTML = '';
-
-    if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<p style="text-align: center; color: #999; padding: 2rem;">Votre panier est vide</p>';
-        cartTotalElement.textContent = '0.00';
-        return;
-    }
-
-    cart.forEach(item => {
-        const cartItemElement = document.createElement('div');
-        cartItemElement.className = 'cart-item';
-        cartItemElement.innerHTML = `
-            <div class="cart-item-info">
-                <div class="cart-item-name">${item.emoji} ${item.name}</div>
-                <div class="cart-item-price">${item.price.toFixed(2)} € x ${item.quantity} = ${(item.price * item.quantity).toFixed(2)} €</div>
-            </div>
-            <div class="cart-item-qty">
-                <button onclick="updateQuantity(${item.id}, -1)" class="btn btn-secondary">-</button>
-                <input type="number" value="${item.quantity}" class="qty-input" readonly>
-                <button onclick="updateQuantity(${item.id}, 1)" class="btn btn-secondary">+</button>
-            </div>
-            <button onclick="removeFromCart(${item.id})" class="btn btn-danger">✕</button>
-        `;
-        cartItemsContainer.appendChild(cartItemElement);
-    });
-
-    // Calculer et afficher le total
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    cartTotalElement.textContent = total.toFixed(2);
-}
-
-// Mettre à jour la quantité
-function updateQuantity(productId, change) {
-    const item = cart.find(i => i.id === productId);
-    if (item) {
-        item.quantity += change;
-        if (item.quantity <= 0) {
-            removeFromCart(productId);
-        } else {
-            updateCartUI();
-        }
-    }
-}
-
-// Supprimer du panier
-function removeFromCart(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    updateCartUI();
-    showNotification('Article supprimé du panier');
-}
-
-// Afficher une notification
-function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 80px;
-        right: 20px;
-        background: #667eea;
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        z-index: 300;
-        animation: slideInRight 0.3s ease;
-    `;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-        notification.style.animation = 'slideOutRight 0.3s ease';
-        setTimeout(() => notification.remove(), 300);
-    }, 3000);
-}
-
-// Ajouter animations aux notifications
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideInRight {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    @keyframes slideOutRight {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// Événements des filtres
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        filterProducts(btn.dataset.filter);
-    });
-});
-
-// Événements du panier
-cartBtn.addEventListener('click', () => {
-    cartModal.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', () => {
-    cartModal.style.display = 'none';
-});
-
-continueShoppingBtn.addEventListener('click', () => {
-    cartModal.style.display = 'none';
-});
-
-shopBtn.addEventListener('click', () => {
-    document.getElementById('produits').scrollIntoView({ behavior: 'smooth' });
-});
-
-checkoutBtn.addEventListener('click', () => {
-    if (cart.length === 0) {
-        alert('Votre panier est vide!');
-        return;
-    }
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    alert(`Paiement de ${total.toFixed(2)} € en cours...\n\nCeci est une démonstration.\nEn production, intégrez un système de paiement (Stripe, PayPal, etc.)`);
-    cart = [];
-    updateCartUI();
-    cartModal.style.display = 'none';
-    showNotification('Commande confirmée! Merci de votre achat.');
-});
-
-// Fermer la modale en cliquant en dehors
-window.addEventListener('click', (event) => {
-    if (event.target === cartModal) {
-        cartModal.style.display = 'none';
-    }
-});
-
-// Initialisation
-displayProducts();
+document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => { document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); filterProducts(btn.dataset.filter); }));
+$('cart-btn').addEventListener('click', () => { cartModal.style.display = 'block'; });
+$('gallery-close').addEventListener('click', closeGallery); $('gallery-prev').addEventListener('click', () => nextImage(-1)); $('gallery-next').addEventListener('click', () => nextImage(1));
+$('gallery-modal').addEventListener('click', (e) => { if (e.target.id === 'gallery-modal') closeGallery(); });
+$('close-btn')?.addEventListener('click', () => cartModal.style.display = 'none'); document.querySelector('.close-btn').addEventListener('click', () => cartModal.style.display = 'none'); $('continue-shopping-btn').addEventListener('click', () => cartModal.style.display = 'none');
+$('shop-btn').addEventListener('click', () => $('produits').scrollIntoView({ behavior: 'smooth' }));
+$('checkout-btn').addEventListener('click', () => { if (!cart.length) return alert('Votre panier est vide !'); alert('Paiement en démonstration. Intégrez Stripe ou PayPal en production.'); cart = []; updateCartUI(); cartModal.style.display = 'none'; });
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeGallery(); cartModal.style.display = 'none'; } if ($('gallery-modal').classList.contains('open') && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) nextImage(e.key === 'ArrowRight' ? 1 : -1); });
+window.addEventListener('click', (e) => { if (e.target === cartModal) cartModal.style.display = 'none'; });
+displayProducts(); updateCartUI();
